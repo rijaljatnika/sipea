@@ -69,7 +69,7 @@ new Chart(ctx, {
       lineTension: false,
       data: randomChartData(9)
     }],
-    labels: ['Semester 1', 'Semester 2', 'Semester 3', 'Semester 4']
+    labels: ['Awal Masuk','Semester 1', 'Semester 2', 'Semester 3', 'Semester 4']
   },
   options: {
     maintainAspectRatio: false,
