@@ -4,7 +4,7 @@ var randomChartData = function randomChartData(n) {
   var data = [];
 
   for (var i = 0; i < n; i++) {
-    data.push(Math.round(Math.random() * 40));
+    data.push(Math.round(Math.random() * 4));
   }
 
   return data;

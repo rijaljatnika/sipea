@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sipea</title>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
 
   <!-- Fonts -->
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -190,7 +190,7 @@
         <div class="level-item">
           <div class="buttons is-right">
             <a href="https://admin-one-vue-cli.justboil.me/" target="_blank"
-               class="button is-primary"><span class="icon"><i
+              class="button is-primary"><span class="icon"><i
                 class="mdi mdi-credit-card-outline"></i></span>
               <span>Premium Demo</span>
             </a>
@@ -206,7 +206,7 @@
           <div class="level-item"><h1 class="subtitle">
             CHILD
           </h1></div>
-          <p>Masukan data anak</p>
+          <p>Kelola Data Anak</p>
         </div>
         <div class="level-right" style="display: none;">
           <div class="level-item"></div>
@@ -215,11 +215,11 @@
     </div>
   </section>
   <section class="section is-main-section">
-    <div class="card">
+    <div class="card column">
       <header class="card-header">
         <p class="card-header-title">
-          <span class="icon"><i class="mdi mdi-ballot"></i></span>
-          Forms
+          <span class="icon"><ion-icon name="add-circle"></ion-icon></span>
+          Kelola data anak
         </p>
       </header>
       <div class="card-content">
@@ -237,7 +237,7 @@
               </div>
               <div class="field">
                 <p class="control is-expanded has-icons-left has-icons-right">
-                  <input class="input is-success" type="email" placeholder="Nama Panggilan" placeholder="Raja">
+                  <input class="input" type="email" placeholder="Nama Panggilan" placeholder="Raja">
                   <span class="icon is-small is-left"><ion-icon name="football"></ion-i></span>
                 </p>
               </div>
@@ -281,11 +281,11 @@
               <div class="field-body">
                 <div class="field">
                   <div class="field is-grouped-multiline is-grouped">
-                    <div class="control"><label class="b-radio radio"><input type="radio" name="kelamin" value="Laki-laki">
+                    <div class="control"><label class="b-radio radio"><input type="radio" name="kelami" value="Laki-laki">
                       <span class="check"></span>
                       <span class="control-label">Laki-laki</span>
                     </label></div>
-                    <div class="control"><label class="b-radio radio"><input type="radio" name="kelamin" value="Perempuan">
+                    <div class="control"><label class="b-radio radio"><input type="radio" name="kelami" value="Perempuan">
                       <span class="check"></span>
                       <span class="control-label">Perempuan</span>
                     </label>
@@ -353,7 +353,7 @@
                 <div class="field is-grouped">
                   <div class="control">
                     <button type="submit" class="button is-success">
-                      <span>Kelola Data Anak</span>
+                      <span>Masukan Borang</span>
                     </button>
                   </div>
                   <div class="control">
@@ -366,6 +366,11 @@
             </div>
           </div>
         </form>
+      </div>
+      
+      <!-- profile foto -->
+      <div class="card-content">
+        
       </div>
     </div>
   </section>
@@ -410,7 +415,7 @@
 </div>
 
 <!-- Stuff below is for demo-only -->
-<script type="text/javascript" src="lib/main.js"></script>
+<script type="text/javascript" src="/assets/lib/main.js"></script>
 <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css">
 </body>
 </html>

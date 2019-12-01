@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" class="has-aside-left has-aside-mobile-transition has-navbar-fixed-top has-aside-expanded">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sipea</title>
-  <link rel="stylesheet" href="/assets/css/main.css">
-
-  <!-- Fonts -->
-  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-</head>
+		<head>
+				<meta charset="utf-8" />
+				<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<title>Sistem Informasi Perkembangan Anak</title>
+				<link rel="stylesheet" href="/assets/css/main.css" />
+				<link rel="stylesheet" href="/assets/css/style.css" />
+				<link rel="stylesheet" href="/assets/css/fontawesome.css"/>
+				<link rel="stylesheet" href="/assets/css/all.css"/>
+				<link rel="stylesheet" href="/assets/css/.css"/>
+				
+				<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		
+				<!-- Fonts -->
+				<link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+				<link rel="dns-prefetch" href="/assets/font/fa-solid-900.ttf" />
+				<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css" />
+		
+				<!-- script -->
+				<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+				<script src="/assets/lib/chunk-vendors.5c11ecce.js"></script>
+				<script src="/assets/lib/app.662731f9.js"></script> 
+			</head>
 <body>
 <div id="app">
   <nav id="navbar-main" class="navbar is-fixed-top">
@@ -66,7 +77,7 @@
               <img src="https://avatars.dicebear.com/v2/initials/john-doe.svg" alt="John Doe">
             </div>
             <div class="is-user-name">
-              <span>John Doe</span>
+              <span>Fibran Saputra</span>
             </div>
             <span class="icon"><i class="mdi mdi-chevron-down"></i></span>
           </a>
@@ -126,13 +137,13 @@
           </a>
         </li>
         <li>
-          <a href="/forms.html" class="is-active has-icon">
+          <a href="/forms.html" class="has-icon">
             <span class="icon"><i class="mdi mdi-square-edit-outline"></i></span>
             <span class="menu-item-label">Forms</span>
           </a>
         </li>
         <li>
-          <a href="/profile.html" class="has-icon">
+          <a href="/profile.html" class="is-active has-icon">
             <span class="icon"><i class="mdi mdi-account-circle"></i></span>
             <span class="menu-item-label">Profile</span>
           </a>
@@ -182,7 +193,7 @@
         <div class="level-item">
           <ul>
             <li>Admin</li>
-            <li>Forms</li>
+            <li>Profile</li>
           </ul>
         </div>
       </div>
@@ -190,9 +201,8 @@
         <div class="level-item">
           <div class="buttons is-right">
             <a href="https://admin-one-vue-cli.justboil.me/" target="_blank"
-               class="button is-primary"><span class="icon"><i
-                class="mdi mdi-credit-card-outline"></i></span>
-              <span>Premium Demo</span>
+               class="button is-primary"><span class="icon"><ion-icon name="print"></ion-i></span>
+              <span>Cetak Laporan</span>
             </a>
           </div>
         </div>
@@ -203,10 +213,9 @@
     <div class="hero-body">
       <div class="level">
         <div class="level-left">
-          <div class="level-item"><h1 class="subtitle">
-            CHILD
+          <div class="level-item"><h1 class="title">
+            Profile
           </h1></div>
-          <p>Kelola Data Anak</p>
         </div>
         <div class="level-right" style="display: none;">
           <div class="level-item"></div>
@@ -215,159 +224,63 @@
     </div>
   </section>
   <section class="section is-main-section">
-    <div class="card">
-      <header class="card-header">
-        <p class="card-header-title">
-          <span class="icon"><ion-icon name="add-circle"></ion-icon></span>
-          Kelola data anak
-        </p>
-      </header>
-      <div class="card-content">
-        <form method="get">
-          <div class="field is-horizontal">
-            <div class="field-label is-normal">
-              <label class="label">Nama Lengkap</label>
+    <div class="tile is-ancestor">
+      <div class="tile is-parent is-8">
+        <div class="card tile is-child">
+          <header class="card-header">
+            <p class="card-header-title">
+              <span class="icon"><i class="mdi mdi-account-circle default"></i></span>
+              Grafik perkembangan Anak
+            </p>
+          </header>
+          <div class="card-content">
+						<div class="chart-area">
+								<div style="height: 100%;">
+									<div class="chartjs-size-monitor">
+										<div class="chartjs-size-monitor-expand">
+											<div></div>
+										</div>
+										<div class="chartjs-size-monitor-shrink">
+											<div></div>
+										</div>
+									</div>
+									<canvas id="big-line-chart" width="100" height="200" class="chartjs-render-monitor" style="display: block; height: 400px; width: 197px;"></canvas>
+								</div>
+							</div>
+          </div>
+        </div>
+      </div>
+      <div class="tile is-parent">
+        <div class="card tile is-child">
+          <header class="card-header">
+            <p class="card-header-title">
+              <span class="icon"><i class="mdi mdi-account default"></i></span>
+              Profile
+            </p>
+          </header>
+          <div class="card-content">
+            <div class="is-user-avatar image has-max-width is-aligned-center">
+              <img src="https://avatars.dicebear.com/v2/initials/john-doe.svg" alt="John Doe">
             </div>
-            <div class="field-body">
-              <div class="field is-normal">
-                <p class="control is-expanded has-icons-left">
-                  <input class="input" type="text" placeholder="Nama lengkap">
-                  <span class="icon is-small is-left"><ion-icon name="person"></ion-icon></ion-icon></span>
-                </p>
+            <hr>
+            <div class="field">
+              <label class="label">Name</label>
+              <div class="control is-clearfix">
+                <input type="text" readonly value="John Doe" class="input is-static">
               </div>
-              <div class="field">
-                <p class="control is-expanded has-icons-left has-icons-right">
-                  <input class="input" type="email" placeholder="Nama Panggilan" placeholder="Raja">
-                  <span class="icon is-small is-left"><ion-icon name="football"></ion-i></span>
-                </p>
+            </div>
+            <hr>
+            <div class="field">
+              <label class="label">E-mail</label>
+              <div class="control is-clearfix">
+                <input type="text" readonly value="user@example.com" class="input is-static">
               </div>
             </div>
           </div>
-          <div class="field is-horizontal">
-              <div class="field-label is-normal">
-                <label class="label">Nomor Induk</label>
-              </div>
-              <div class="field-body">
-                <div class="field is-narrow">
-                  <div class="control">
-                    <div class="field">
-                        <input class="input" type="text" placeholder="Nomor Induk">
-                      </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-          <!-- <div class="field is-horizontal">
-            <div class="field-label is-normal">
-              <label class="label">Semester</label>
-            </div>
-            <div class="field-body">
-              <div class="field is-narrow">
-                <div class="control">
-                  <div class="select is-fullwidth">
-                    <select>
-                      <option>Semester 1</option>
-                      <option>Semester 2</option>
-                      <option>Semester 3</option>
-                      <option>Semester 4</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-          <div class="field has-check is-horizontal">
-              <div class="field-label"><label class="label">Jenis Kelamin</label></div>
-              <div class="field-body">
-                <div class="field">
-                  <div class="field is-grouped-multiline is-grouped">
-                    <div class="control"><label class="b-radio radio"><input type="radio" value="Laki-laki">
-                      <span class="check"></span>
-                      <span class="control-label">Laki-laki</span>
-                    </label></div>
-                    <div class="control"><label class="b-radio radio"><input type="radio" value="Perempuan">
-                      <span class="check"></span>
-                      <span class="control-label">Perempuan</span>
-                    </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-          </div>
-          <div class="field is-horizontal">
-              <div class="field-label is-normal">
-                <label class="label">Agama</label>
-              </div>
-              <div class="field-body">
-                <div class="field is-narrow">
-                  <div class="control">
-                    <div class="select is-fullwidth">
-                      <select>
-                        <option>Islam</option>
-                        <option>Kristen</option>
-                        <option>Hindu</option>
-                        <option>Budha</option>
-                        <option>Kong-Hu-Chu</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          <div class="field is-horizontal">
-            <div class="field-label is-normal">
-              <label class="label">Alamat</label>
-            </div>
-            <div class="field-body">
-              <div class="field">
-                <div class="control">
-                  <textarea class="textarea" placeholder="Alamat lengkap"></textarea>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="field is-horizontal">
-              <div class="field-label is-normal"><label class="label">Foto Anak</label></div>
-              <div class="field-body">
-                <div class="field">
-                  <div class="field file">
-                    <label class="upload control">
-                      <a class="button is-warning">
-                        <span class="icon"><i class="mdi mdi-upload"></i></span>
-                        <span>Upload Photo</span>
-                      </a>
-                      <input type="file">
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          <hr>
-          <div class="field is-horizontal">
-            <div class="field-label">
-              <!-- Left empty for spacing -->
-            </div>
-            <div class="field-body">
-              <div class="field">
-                <div class="field is-grouped">
-                  <div class="control">
-                    <button type="submit" class="button is-success">
-                      <span>Masukan Borang</span>
-                    </button>
-                  </div>
-                  <div class="control">
-                    <button type="button" class="button is-warning is-outlined">
-                      <span>Bersihkan Data</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </form>
+        </div>
       </div>
     </div>
+
   </section>
 
   <footer class="footer">
@@ -375,13 +288,13 @@
       <div class="level">
         <div class="level-left">
           <div class="level-item">
-            © 2019, Sistem Informasi Anak TK
+            © 2019, JustBoil.me
           </div>
         </div>
         <div class="level-right">
           <div class="level-item">
             <div class="logo">
-              <a href="https://twitter.com/rijaljatnika"><img src="img/justboil-logo.svg" alt="JustBoil.me"></a>
+              <a href="https://justboil.me"><img src="/img/justboil-logo.svg" alt="JustBoil.me"></a>
             </div>
           </div>
         </div>
@@ -411,6 +324,8 @@
 
 <!-- Stuff below is for demo-only -->
 <script type="text/javascript" src="/assets/lib/main.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<script type="text/javascript" src="/assets/lib/chart.sample.js"></script>
 <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.4.95/css/materialdesignicons.min.css">
 </body>
 </html>
